@@ -1,0 +1,7 @@
+// parts
+@use 'parts/common' as *;
+@use 'parts/nav-menu' as *;
+
+// pages
+@use 'parts/header' as *;
+@use 'pages/home' as *;
