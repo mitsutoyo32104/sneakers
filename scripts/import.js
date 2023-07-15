@@ -1,0 +1,1 @@
+document.write('<script src="scripts/libs/nav-menu.js"></script>');
