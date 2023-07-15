@@ -4,7 +4,12 @@
     font-size: $defaultFontSize;
 }
 
+body {
+    font-family: 'Kameron', 'Noto Sans JP', serif;
+}
+
 .container {
     padding: 0 20px;
     max-width: $maxWidth;
+    margin: 0 auto;
 }
