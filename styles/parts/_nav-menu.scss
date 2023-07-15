@@ -6,10 +6,15 @@
     height: 100vh;
     background-color: black;
     padding: 60px 25px;
+    transform: translateX(-300px);
+    transition: all 0.3s;
 
     &__icon {
         position: relative;
         z-index: 2000;
+        background-color: transparent;
+        border: none;
+        outline: none;
 
         & > span {
             display: block;
@@ -17,6 +22,7 @@
             height: 2px;
             background-color: black;
             margin-bottom: 5px;
+            transition: all 0.3s;
 
             &:last-child {
                 margin-bottom: 0;
@@ -31,6 +37,8 @@
         width: 100vw;
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.8);
+        visibility: hidden;
+        pointer-events: none;
     }
     
     &__item {
@@ -63,6 +71,35 @@
         & > a {
             text-decoration: none;
             color: white;
+        }
+    }
+}
+
+.header.inview {
+    & .nav {
+        transform: none;
+
+        &__icon {
+            & > span {
+                background-color: white;
+
+                &:first-child {
+                    transform: translateY(7px) rotate(-135deg);
+                }
+
+                &:nth-child(2) {
+                    transform: translateX(-30px);
+                    opacity: 0;
+                }
+
+                &:nth-child(3) {
+                    transform: translateY(-7px) rotate(135deg);
+                }
+            }
+        }
+
+        &__cover {
+            visibility: visible;
         }
     }
 }

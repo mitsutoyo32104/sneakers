@@ -30,10 +30,15 @@
   height: 100vh;
   background-color: black;
   padding: 60px 25px;
+  transform: translateX(-300px);
+  transition: all 0.3s;
 }
 .nav__icon {
   position: relative;
   z-index: 2000;
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 .nav__icon > span {
   display: block;
@@ -41,6 +46,7 @@
   height: 2px;
   background-color: black;
   margin-bottom: 5px;
+  transition: all 0.3s;
 }
 .nav__icon > span:last-child {
   margin-bottom: 0;
@@ -52,6 +58,8 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+  pointer-events: none;
 }
 .nav__item {
   list-style: none;
@@ -81,10 +89,41 @@
   color: white;
 }
 
+.header.inview .nav {
+  transform: none;
+}
+.header.inview .nav__icon > span {
+  background-color: white;
+}
+.header.inview .nav__icon > span:first-child {
+  transform: translateY(7px) rotate(-135deg);
+}
+.header.inview .nav__icon > span:nth-child(2) {
+  transform: translateX(-30px);
+  opacity: 0;
+}
+.header.inview .nav__icon > span:nth-child(3) {
+  transform: translateY(-7px) rotate(135deg);
+}
+.header.inview .nav__cover {
+  visibility: visible;
+}
+
 .mainvisual {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   position: relative;
   margin-top: 80px;
+}
+.mainvisual > video {
+  min-width: 100%;
+  min-height: 100%;
+}
+.mainvisual > h1 {
+  font-family: serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }/*# sourceMappingURL=style.css.map */
