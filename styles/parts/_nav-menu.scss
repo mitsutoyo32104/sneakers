@@ -57,6 +57,14 @@
         & > a {
             color: white;
             text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        &:hover {
+            & > a {
+                color: mediumvioletred;
+                letter-spacing: 5px;
+            }
         }
     }
 }
@@ -71,6 +79,14 @@
         & > a {
             text-decoration: none;
             color: white;
+            transition: all 0.3s;
+        }
+
+        &:hover {
+            & > a {
+                color: mediumvioletred;
+                letter-spacing: 5px;
+            }
         }
     }
 }

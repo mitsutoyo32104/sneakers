@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: "Kameron", "Noto Sans JP", serif;
+  font-family: "Kameron", "Noto Sans JP", sans-serif;
 }
 
 .container {
@@ -81,6 +81,11 @@ body {
 .nav__item > a {
   color: white;
   text-decoration: none;
+  transition: all 0.3s;
+}
+.nav__item:hover > a {
+  color: mediumvioletred;
+  letter-spacing: 5px;
 }
 
 .sns {
@@ -93,6 +98,11 @@ body {
 .sns__item > a {
   text-decoration: none;
   color: white;
+  transition: all 0.3s;
+}
+.sns__item:hover > a {
+  color: mediumvioletred;
+  letter-spacing: 5px;
 }
 
 .header.inview .nav {
