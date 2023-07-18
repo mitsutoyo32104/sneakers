@@ -6,6 +6,7 @@
     overflow: hidden;
     position: relative;
     margin-top: 80px;
+    margin-bottom: $sectionMargin;
 
     & > video {
         min-width: 100%;
@@ -76,5 +77,18 @@
             left: -20px;
             color: white;
         }
+    }
+}
+
+
+.pickup {
+    margin-bottom: $sectionMargin;
+}
+
+.feature__item {
+    margin-bottom: $sectionMargin;
+
+    &__main {
+        display: gap;
     }
 }
