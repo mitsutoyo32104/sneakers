@@ -236,9 +236,26 @@ body {
   margin-bottom: 50px;
 }
 
-.feature__item {
+.feature {
   margin-bottom: 50px;
 }
-.feature__item__main {
-  display: gap;
+.feature__main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+.feature__item {
+  list-style: none;
+  box-shadow: 1px 1px 5px gray;
+}
+.feature__link > img {
+  max-width: 100%;
+}
+
+.appear {
+  transition: all 0.3s;
+}
+
+.appear.inview {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */
