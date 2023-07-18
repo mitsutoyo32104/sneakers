@@ -1,4 +1,4 @@
-@use '../globals/vriables' as *;
+@use '../globals/variables' as *;
 
 * {
     font-size: $defaultFontSize;
@@ -9,7 +9,7 @@ body {
 }
 
 .container {
-    padding: 0 20px;
+    padding: 0 16px;
     max-width: $maxWidth;
     margin: 0 auto;
 }

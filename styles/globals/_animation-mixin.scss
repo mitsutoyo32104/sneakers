@@ -1,0 +1,32 @@
+ @mixin animation (
+    $name, 
+    $duration: 1s, 
+    $delay: 0s, 
+    $timing-function: ease,  
+    $iteration-count: infinite,
+    $fill-mode: none
+) {
+    animation: {
+        name: $name;
+        duration: $duration;
+        delay: $delay;
+        timing-function: $timing-function;
+        iteration-count: $iteration-count;
+        fill-mode: $fill-mode;
+    }
+}
+
+@keyframes kf-down-arrow {
+    0% {
+        transform: none
+    }
+    35% {
+        transform: translateY(20px);
+    }
+    70% {
+        transform: none;
+    }
+    100% {
+        transform: none;
+    }
+}
