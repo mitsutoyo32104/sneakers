@@ -148,19 +148,19 @@ body {
 
 .appear.feature__item {
   opacity: 0;
-  transition: all 0.3s;
+  transition: all 0.6s;
 }
 .appear.feature__item.up {
-  transform: translateY(10px);
+  transform: translateY(20px);
 }
 .appear.feature__item.right {
-  transform: translateX(-10px);
+  transform: translateX(-20px);
 }
 .appear.feature__item.down {
-  transform: translateY(-10px);
+  transform: translateY(-20px);
 }
 .appear.feature__item.left {
-  transform: translateX(10px);
+  transform: translateX(20px);
 }
 
 .appear.inview.feature__item {
@@ -333,4 +333,11 @@ body {
 .contact__form button[type=submit]:hover::before {
   transform: none;
   background-color: white;
+}
+
+footer {
+  background-color: black;
+  text-align: center;
+  padding: 20px 0;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
