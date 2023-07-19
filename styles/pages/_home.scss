@@ -101,18 +101,77 @@
     }
 
     &__link {
+        text-decoration: none;
+        color: black;
 
         & > img {
             max-width: 100%;
+            border-bottom: 1px solid rgba(198, 196, 196, 0.5);
         }
+    }
+
+    &__text {
+        padding: 10px;
     }
 }
 
-.appear {
-    // opacity: 0;
-    transition: all 0.3s;
-}
+.contact {
+    background-color: black;
+    color: white;
+    padding-bottom: $sectionMargin;
 
-.appear.inview {
-    opacity: 1;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text {
+        width: 45%;
+    }
+
+    &__form {
+        width: 45%;
+
+        & input, textarea {
+            width: 100%;
+            margin-bottom: 20px;
+            color: gray;
+        }
+
+        & button[type="submit"] {
+            position: relative;
+            background-color: transparent;
+            outline: none;
+            border: 1px solid white;
+            color: white;
+            padding: 10px 80px;
+            z-index: 1;
+            cursor: grab;
+            transition: all 0.3s;
+            overflow: hidden;
+
+            &::before {
+                display: inline-block;
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: white;
+                z-index: -1;
+                transform: translateX(100%);
+                transition: all 0.3s;
+            }
+
+            &:hover {              
+                color: black;
+
+                &::before {
+                    transform: none;
+                    background-color: white;
+                }
+            }
+        }
+    }
 }

@@ -1,0 +1,23 @@
+$pattern: (
+    'up': 'translateY(10px)',
+    'right': 'translateX(-10px)',
+    'down': 'translateY(-10px)',
+    'left': 'translateX(10px)',
+);
+
+
+.appear.feature__item {
+    opacity: 0;
+    transition: all 0.3s;
+
+    @each $key, $value in $pattern {
+        &.#{$key} {
+            transform: #{$value};
+        }
+    }
+}
+
+.appear.inview.feature__item {
+    transform: none;
+    opacity: 1;
+}

@@ -146,6 +146,28 @@ body {
   outline: none;
 }
 
+.appear.feature__item {
+  opacity: 0;
+  transition: all 0.3s;
+}
+.appear.feature__item.up {
+  transform: translateY(10px);
+}
+.appear.feature__item.right {
+  transform: translateX(-10px);
+}
+.appear.feature__item.down {
+  transform: translateY(-10px);
+}
+.appear.feature__item.left {
+  transform: translateX(10px);
+}
+
+.appear.inview.feature__item {
+  transform: none;
+  opacity: 1;
+}
+
 @keyframes kf-down-arrow {
   0% {
     transform: none;
@@ -248,14 +270,67 @@ body {
   list-style: none;
   box-shadow: 1px 1px 5px gray;
 }
+.feature__link {
+  text-decoration: none;
+  color: black;
+}
 .feature__link > img {
   max-width: 100%;
+  border-bottom: 1px solid rgba(198, 196, 196, 0.5);
+}
+.feature__text {
+  padding: 10px;
 }
 
-.appear {
+.contact {
+  background-color: black;
+  color: white;
+  padding-bottom: 50px;
+}
+.contact__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.contact__text {
+  width: 45%;
+}
+.contact__form {
+  width: 45%;
+}
+.contact__form input, .contact__form textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  color: gray;
+}
+.contact__form button[type=submit] {
+  position: relative;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 80px;
+  z-index: 1;
+  cursor: grab;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+.contact__form button[type=submit]::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  z-index: -1;
+  transform: translateX(100%);
   transition: all 0.3s;
 }
-
-.appear.inview {
-  opacity: 1;
+.contact__form button[type=submit]:hover {
+  color: black;
+}
+.contact__form button[type=submit]:hover::before {
+  transform: none;
+  background-color: white;
 }/*# sourceMappingURL=style.css.map */
