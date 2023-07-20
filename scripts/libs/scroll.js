@@ -7,8 +7,7 @@ class ScrollObserver {
             rootMargin: "-200px 0px",
         }
         this.options = Object.assign(options, defaultOptions);
-        this.io;
-        this._init();
+        this.io = this._init();
     }
 
     _init() {
@@ -16,7 +15,7 @@ class ScrollObserver {
         this.els.forEach(el => {
             io.observe(el);
         });
-        this.io = io;
+        return io;
     }
 
     _callback(entries, observer) {
