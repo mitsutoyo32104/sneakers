@@ -1,13 +1,7 @@
-
-document.addEventListener('DOMContentLoaded', function() {
-    new TextAnimation('.animate-title');
-});
-
-
 class TextAnimation {
-    constructor(els) {
+    constructor(target) {
         this.DOM = {};
-        this.DOM.els = document.querySelectorAll(els);
+        this.DOM.target = document.querySelectorAll(target);
 
         // DOMの文字列を配列で保持
         this.strings = this._pushString();
@@ -18,16 +12,16 @@ class TextAnimation {
         // 各文字をspan.charで括る
         this.chars = this._bindChar();
 
-        // 各文字列を.charで括った文字列に書き換える
+        // 各文字列を.charで括ったHTMLに書き換える
         this.chars.forEach(function(char, i) {
-            this.DOM.els[i].innerHTML = char;
+            this.DOM.target[i].innerHTML = char;
         }.bind(this));
     }
 
     _pushString() {
         this.strings = [];
 
-        this.DOM.els.forEach(el => {
+        this.DOM.target.forEach(el => {
             const string = el.textContent;
             this.strings.push(string);
         });

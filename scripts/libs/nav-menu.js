@@ -11,8 +11,11 @@ class NavMenu {
 
     _addEvent() {this
         this.DOM.trigger.addEventListener('click', this._toggleOpen.bind(this));
+
+        // nav__coverをclickしたらnavを隠す
         this.DOM.cover.addEventListener('click', this._toggleOpen.bind(this));
 
+        // sns以外のlinkをclickしたらnavを隠す
         this.DOM.navItem.forEach(function(navItem) {
             if(!navItem.classList.contains('sns')) {
                 navItem.addEventListener('click', this._toggleOpen.bind(this));
@@ -20,6 +23,7 @@ class NavMenu {
         }.bind(this));
     }
 
+     // headerに.inviewを付け外ししてnavを表示・非表示
     _toggleOpen() {
         this.DOM.target.classList.toggle('open');
     }

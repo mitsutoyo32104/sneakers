@@ -4,7 +4,7 @@ class ScrollObserver {
         this.cbProcess = cbProcess;
         const defaultOptions = {
             root: null,                      
-            rootMargin: "-200px 0px",
+            rootMargin: "-100px 0px",
         }
         this.options = Object.assign(options, defaultOptions);
         this.io = this._init();

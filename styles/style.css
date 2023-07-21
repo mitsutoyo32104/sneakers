@@ -15,8 +15,10 @@ body {
 .section-title {
   text-align: center;
   padding: 50px 0;
-  font-size: 2rem;
   font-weight: normal;
+}
+.section-title > .char {
+  font-size: 2rem;
 }
 
 .header {
@@ -164,6 +166,48 @@ body {
 }
 
 .appear.inview.feature__item {
+  transform: none;
+  opacity: 1;
+}
+
+.animate-title > .char {
+  display: inline-block;
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: all 0.3s;
+}
+.animate-title > .char:nth-child(1) {
+  transition-delay: 0.05s;
+}
+.animate-title > .char:nth-child(2) {
+  transition-delay: 0.1s;
+}
+.animate-title > .char:nth-child(3) {
+  transition-delay: 0.15s;
+}
+.animate-title > .char:nth-child(4) {
+  transition-delay: 0.2s;
+}
+.animate-title > .char:nth-child(5) {
+  transition-delay: 0.25s;
+}
+.animate-title > .char:nth-child(6) {
+  transition-delay: 0.3s;
+}
+.animate-title > .char:nth-child(7) {
+  transition-delay: 0.35s;
+}
+.animate-title > .char:nth-child(8) {
+  transition-delay: 0.4s;
+}
+.animate-title > .char:nth-child(9) {
+  transition-delay: 0.45s;
+}
+.animate-title > .char:nth-child(10) {
+  transition-delay: 0.5s;
+}
+
+.animate-title.inview > .char {
   transform: none;
   opacity: 1;
 }
