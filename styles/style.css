@@ -72,11 +72,9 @@ body {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
   visibility: hidden;
-  pointer-events: none;
 }
 .nav__item {
   list-style: none;
-  padding: 20px 0;
   border-top: 1px solid white;
 }
 .nav__item:nth-child(3) {
@@ -86,9 +84,11 @@ body {
   border: none;
 }
 .nav__item > a {
+  display: block;
   color: white;
   text-decoration: none;
   transition: all 0.3s;
+  padding: 20px 0;
 }
 .nav__item:hover > a {
   color: mediumvioletred;
@@ -112,23 +112,23 @@ body {
   letter-spacing: 5px;
 }
 
-.header.inview .nav {
+.header.open .nav {
   transform: none;
 }
-.header.inview .nav__icon > span {
+.header.open .nav__icon > span {
   background-color: white;
 }
-.header.inview .nav__icon > span:first-child {
+.header.open .nav__icon > span:first-child {
   transform: translateY(7px) rotate(-135deg);
 }
-.header.inview .nav__icon > span:nth-child(2) {
+.header.open .nav__icon > span:nth-child(2) {
   transform: translateX(-30px);
   opacity: 0;
 }
-.header.inview .nav__icon > span:nth-child(3) {
+.header.open .nav__icon > span:nth-child(3) {
   transform: translateY(-7px) rotate(135deg);
 }
-.header.inview .nav__cover {
+.header.open .nav__cover {
   visibility: visible;
 }
 

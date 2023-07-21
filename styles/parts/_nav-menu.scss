@@ -38,12 +38,10 @@
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.8);
         visibility: hidden;
-        pointer-events: none;
     }
     
     &__item {
         list-style: none;
-        padding: 20px 0;
         border-top: 1px solid white;
 
         &:nth-child(3) {
@@ -55,9 +53,11 @@
         }
 
         & > a {
+            display: block;
             color: white;
             text-decoration: none;
             transition: all 0.3s;
+            padding: 20px 0;
         }
 
         &:hover {
@@ -91,7 +91,7 @@
     }
 }
 
-.header.inview {
+.header.open {
     & .nav {
         transform: none;
 
