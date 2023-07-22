@@ -58,6 +58,7 @@
             text-decoration: none;
             transition: all 0.3s;
             padding: 20px 0;
+            cursor: grab;
         }
 
         &:hover {
@@ -72,6 +73,7 @@
 
 .sns {
     margin-top: 50px;
+
     &__item {
         list-style: none;
         margin-bottom: 10px;

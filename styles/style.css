@@ -4,6 +4,7 @@
 
 body {
   font-family: "Kameron", "Noto Sans JP", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -91,6 +92,7 @@ body {
   text-decoration: none;
   transition: all 0.3s;
   padding: 20px 0;
+  cursor: grab;
 }
 .nav__item:hover > a {
   color: mediumvioletred;
