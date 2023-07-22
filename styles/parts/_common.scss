@@ -1,0 +1,26 @@
+@use "../globals/variables" as *;
+
+* {
+    font-size: $defaultFontSize;
+}
+
+body {
+    font-family: "Kameron", "Noto Sans JP", sans-serif;
+    scroll-behavior: smooth;
+}
+
+.container {
+    padding: 0 16px;
+    max-width: $maxWidth;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    padding: 50px 0;
+    font-weight: normal;
+
+    & > .char {
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sneakers</title>
+        <meta name="description" content="sneakerの紹介ページです" />
+        <link rel="icon" href="image/feature-1.jpg" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="styles/vendors/reset.css" />
+        <link rel="stylesheet" href="styles/style.css" />
+        <script
+            src="https://code.jquery.com/jquery-3.7.0.min.js"
+            integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+            crossorigin="anonymous"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+        />
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+        <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+    </head>
+    <body>
+        <div id="loader">
+            <span class="loader-icon"></span>
+        </div>
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <h1 class="site-tile">
+                        <img src="image/logp.svg" alt="" />
+                    </h1>
+                    <button class="nav__icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="nav__cover"></div>
+                    <nav class="nav">
+                        <ul class="nav__main">
+                            <li class="nav__item">
+                                <a class="nav__link" id="#pickup">PICK UP</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" id="#feature">FEATURE</a>
+                            </li>
+                            <li class="nav__item">
+                                <a class="nav__link" id="#contact">CONTACT</a>
+                            </li>
+                            <li class="nav__item sns">
+                                <ul class="sns__main">
+                                    <li class="sns__item">
+                                        <a
+                                            href="https://twitter.com/search?q=sneaker&src=typed_query"
+                                            target="_blank"
+                                            >Twitter</a
+                                        >
+                                    </li>
+                                    <li class="sns__item">
+                                        <a href="https://ja-jp.facebook.com/"
+                                            target="_blank"
+                                            >Facebook</a
+                                        >
+                                    </li>
+                                    <li class="sns__item">
+                                        <a
+                                            href="https://www.instagram.com/?hl=ja"
+                                            target="_blank"
+                                            >Instagram</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="mainvisual">
+                <video
+                    autoplay
+                    muted
+                    loop
+                    src="video/133504 (1440p).mp4"
+                    poster="image/feature-1.jpg"
+                ></video>
+                <h1>SNEAKERS</h1>
+                <div class="scroll-icon">
+                    <p>Scroll</p>
+                    <span class="down-arrow"></span>
+                </div>
+            </div>
+            <section class="pickup" id="pickup">
+                <h2 class="section-title animate-title">PICK UP</h2>
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img
+                                src="image/shoes-allstar_1920.jpg"
+                                srcset="
+                                    (-webkit-min-device-pixel-ration: 2) image/shoes-allstar_1280.jpg 1280w,
+                                    image/shoes-allstar_1920.jpg 1920w
+                                "
+                                alt="sneakerのスライド写真"
+                                {}
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="image/running-shoes_1920.jpg"
+                                srcset="
+                                    image/running-shoes_1280.jpg 1280w,
+                                    image/running-shoes_1920.jpg 1920w
+                                "
+                                alt="sneakerのスライド写真"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="image/shoes-newbalance_1920.jpg"
+                                srcset="
+                                    image/shoes-newbalance_1280.jpg 1280w,
+                                    image/shoes-newbalance_1920.jpg 1920w
+                                "
+                                alt="sneakerのスライド写真"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="image/sneaker-asix_1920.jpg"
+                                srcset="
+                                    image/sneaker-asix_1280.jpg 1280w,
+                                    image/sneaker-asix_1280.jpg 1920w
+                                "
+                                alt="sneakerのスライド写真"
+                            />
+                        </div>
+                        <div class="swiper-slide">
+                            <img
+                                src="image/fashion-heal_1920.jpg"
+                                srcset="
+                                    image/fashion-heel_1280.jpg 1280w,
+                                    image/fashion-heel_1920.jpg 1920w
+                                "
+                                alt="sneakerのスライド写真"
+                            />
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </section>
+            <section class="feature" id="feature">
+                <div class="container">
+                    <h2 class="section-title animate-title">FEATURE</h2>
+                    <ul class="feature__main">
+                        <li class="feature__item appear down">
+                            <a href="#" class="feature__link">
+                                <img
+                                    src="image/shoes-allstar_1920.jpg"
+                                    srcset="
+                                        image/shoes-allstar_1280.jpg 1280w,
+                                        image/shoes-allstar_1920.jpg 1920w
+                                    "
+                                    alt="sneakerのスライド写真"
+                                />
+                                <div class="feature__text">
+                                    <div class="feature__text__inner">
+                                        <h3>Product Name</h3>
+                                        <p>category</p>
+                                    </div>
+                                    <p>
+                                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                    </p>
+                                    <time datetime="2023-7-19 10:48"
+                                        >2023/7/19 10:48</time
+                                    >
+                                </div>
+                            </a>
+                        </li>
+                        <li class="feature__item appear down">
+                            <img
+                                src="image/snow_1920.jpg"
+                                srcset="
+                                    image/snow_1280.jpg 1280w,
+                                    image/snow_1920.jpg 1920w
+                                "
+                                alt="sneakerのスライド写真"
+                            />
+                        </li>
+                        <li class="feature__item appear down">
+                            <img
+                                src="image/trail_1920.jpg"
+                                srcset="
+                                    image/trail_1280.jpg 1280w,
+                                    image/trail_1920.jpg 1920w
+                                "
+                                alt="sneakerのスライド写真"
+                            />
+                        </li>
+                        <li class="feature__item appear right">
+                            <a href="#" class="feature__link">
+                                <img
+                                    src="image/shoes-newbalance_1920.jpg"
+                                    srcset="
+                                        image/shoes-newbalance_1280.jpg 1280w,
+                                        image/shoes-newbalance_1920.jpg 1920w
+                                    "
+                                    alt="sneakerのスライド写真"
+                                />
+                                <div class="feature__text">
+                                    <div class="feature__text__inner">
+                                        <h3>Product Name</h3>
+                                        <p>category</p>
+                                    </div>
+                                    <p>
+                                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                    </p>
+                                    <time datetime="2023-7-19 10:48"
+                                        >2023/7/19 10:48</time
+                                    >
+                                </div>
+                            </a>
+                        </li>
+                        <li class="feature__item appear right">
+                            <a href="#" class="feature__link">
+                                <img
+                                    src="image/sneaker-nike_1920.jpg"
+                                    srcset="
+                                    image/sneaker-nike_1280.jpg 1280w
+                                    image/sneaker-nike_1920.jpg 1920w
+                                "
+                                    alt="sneakerのスライド写真"
+                                />
+                                <div class="feature__text">
+                                    <div class="feature__text__inner">
+                                        <h3>Product Name</h3>
+                                        <p>category</p>
+                                    </div>
+                                    <p>
+                                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                    </p>
+                                    <time datetime="2023-7-19 10:48"
+                                        >2023/7/19 10:48</time
+                                    >
+                                </div>
+                            </a>
+                        </li>
+                        <li class="feature__item appear right">
+                            <a href="#" class="feature__link">
+                                <img
+                                    src="image/fashion-heel_1920.jpg"
+                                    srcset="
+                                    image/fashion-heel_1280.jpg 1280w
+                                    image/fashion-heel_1920.jpg 1920w
+                                "
+                                    alt="sneakerのスライド写真"
+                                />
+                                <div class="feature__text">
+                                    <div class="feature__text__inner">
+                                        <h3>Product Name</h3>
+                                        <p>category</p>
+                                    </div>
+                                    <p>
+                                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                    </p>
+                                    <time datetime="2023-7-19 10:48"
+                                        >2023/7/19 10:48</time
+                                    >
+                                </div>
+                            </a>
+                        </li>
+                        <li class="feature__item appear left">
+                            <a href="#" class="feature__link">
+                                <img
+                                    src="image/shoes-blue_1920.jpg"
+                                    srcset="
+                                    image/shoes-blue_1280.jpg 1280w
+                                    image/shoes-blue_1920.jpg 1920w
+                                "
+                                    alt="sneakerのスライド写真"
+                                />
+                                <div class="feature__text">
+                                    <div class="feature__text__inner">
+                                        <h3>Product Name</h3>
+                                        <p>category</p>
+                                    </div>
+                                    <p>
+                                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                    </p>
+                                    <time datetime="2023-7-19 10:48"
+                                        >2023/7/19 10:48</time
+                                    >
+                                </div>
+                            </a>
+                        </li>
+                        <li class="feature__item appear left">
+                            <a href="#" class="feature__link">
+                                <img
+                                    src="image/boots_1280.jpg"
+                                    srcset="
+                                    image/boots_1280.jpg 1280w
+                                    image/boots_1920.jpg 1920w
+                                "
+                                    alt="sneakerのスライド写真"
+                                />
+                                <div class="feature__text">
+                                    <div class="feature__text__inner">
+                                        <h3>Product Name</h3>
+                                        <p>category</p>
+                                    </div>
+                                    <p>
+                                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+                                    </p>
+                                    <time datetime="2023-7-19 10:48"
+                                        >2023/7/19 10:48</time
+                                    >
+                                </div>
+                            </a>
+                        </li>
+                        <li class="feature__item appear left">
+                            <img
+                                src="image/high-heels_1920.jpg"
+                                srcset="
+                                    image/high-heels_1280.jpg 1280w
+                                    image/high-heels_1920.jpg 1920w
+                                "
+                                alt="sneakerのスライド写真"
+                            />
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="contact" id="contact">
+                <div class="container">
+                    <h2 class="section-title animate-title">CONTACT</h2>
+                    <div class="contact__inner">
+                        <div class="contact__text">
+                            テキストテキストテキストテキストテキストテキストテキストテキスト<br />
+                            テキストテキストテキストテキストテキストテキストテキストテキスト<br />
+                            テキストテキストテキストテキストテキストテキストテキストテキスト<br />
+                            テキストテキストテキストテキストテキストテキストテキストテキスト<br />
+                        </div>
+                        <form
+                            class="contact__form"
+                            action="send.php"
+                            method="POST"
+                        >
+                            <div>
+                                <label for="">
+                                    name:
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        value="お名前をご入力ください。"
+                                        required
+                                    />
+                                </label>
+                            </div>
+                            <div>
+                                email:
+                                <input
+                                    type="email"
+                                    name="email"
+                                    value="メールアドレスをご入力ください。"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                message:
+                                <textarea
+                                    name="message"
+                                    placeholder="ご用件をご入力ください。"
+                                    required
+                                ></textarea>
+                            </div>
+                            <button type="submit">SEND</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy;Sneakers</p>
+        </footer>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+        <script src="scripts/import.js"></script>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>
