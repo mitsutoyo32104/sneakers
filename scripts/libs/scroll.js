@@ -2,7 +2,6 @@
 class Scroll {
     constructor(trigger) {
         this.links = document.querySelectorAll(trigger);
-        console.log(this.links);
         this._addEvent();
     }
 

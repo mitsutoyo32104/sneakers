@@ -14,5 +14,3 @@ document.addEventListener('DOMContentLoaded', function() {
     new ScrollObserver('.appear', addInview);
     new ScrollObserver('.animate-title', addInview);
 });
-
-
