@@ -48,6 +48,7 @@ body {
   padding: 60px 25px;
   transform: translateX(-300px);
   transition: all 0.3s;
+  z-index: 1000;
 }
 .nav__icon {
   position: relative;
@@ -75,6 +76,7 @@ body {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
   visibility: hidden;
+  z-index: 2;
 }
 .nav__item {
   list-style: none;
@@ -332,7 +334,7 @@ body {
   bottom: 30%;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 3000;
+  z-index: 2;
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
 }
