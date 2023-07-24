@@ -8,6 +8,7 @@
     padding: 60px 25px;
     transform: translateX(-300px);
     transition: all 0.3s;
+    z-index: 1000;
 
     &__icon {
         position: relative;
@@ -38,6 +39,7 @@
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.8);
         visibility: hidden;
+        z-index: 2;
     }
     
     &__item {
