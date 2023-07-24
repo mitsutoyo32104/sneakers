@@ -52,4 +52,3 @@ class Scroll {
     }
 }
 
-new Scroll(".nav__link", "sns");

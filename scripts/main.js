@@ -1,16 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // navigation.openをtoggle
-    new NavMenu;
+    new Main;
+});
 
-    // titleの文字をspan.charで分割
-    new TextAnimation('.animate-title');
-
-    // interseciton Observerへ登録するcallback
-    const addInview = function(el) {
-        el.classList.add('inview');
+class Main {
+    constructor() {
+        this._init();
+        this._ScrollObserverInit();
     }
 
-    // instersection Observerへの登録
-    new ScrollObserver('.appear', addInview);
-    new ScrollObserver('.animate-title', addInview);
-});
+    _init() {
+        // navigation.openをtoggle
+        new NavMenu;
+    
+        // titleの文字をspan.charで分割
+        new TextAnimation('.animate-title');
+
+        // Link先へのScroll
+        new Scroll(".nav__link", "sns");
+    };
+
+     // instersection Observerへの登録
+    _ScrollObserverInit() {
+        new ScrollObserver('.appear', this._addInview.bind(this));
+        new ScrollObserver('.animate-title', this._addInview.bind(this));
+    }
+
+
+    // interseciton Observerへ登録するcallback
+    _addInview(el) {
+        el.classList.add('inview');
+    }
+    
+}
