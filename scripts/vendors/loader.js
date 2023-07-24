@@ -5,7 +5,7 @@
 var bar = new ProgressBar.Line(loader, {
     strokeWidth: 4,
     easing: 'easeInOut',
-    duration: 1400,
+    duration: 1000,
     color: 'white',
     trailColor: 'transparent',
     trailWidth: 1,
@@ -38,4 +38,4 @@ setTimeout(function() {
     const container = document.querySelector('#loader');
     container.style.opacity = 0;
     container.style.pointerEvents = 'none';
-}, 2400);
+}, 1000);
