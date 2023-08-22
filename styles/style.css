@@ -22,7 +22,7 @@ body {
   font-size: 2rem;
 }
 
-.site-title-text {
+#site-title-text {
   display: none;
 }
 
