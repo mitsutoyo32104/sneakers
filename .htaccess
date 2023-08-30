@@ -1,2 +1,9 @@
 AddType image/svg+xml .svg .svgz
 AddEncoding gzip .svgz
+
+AddType video/mp4 .mp4
+AddType video/quicktime .mov
+
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !sneakers
+RewriteRule / http://mitsu32104.html.xdomain.jp/sneakers
