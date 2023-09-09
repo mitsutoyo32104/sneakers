@@ -3,33 +3,63 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sneakers</title>
-        <meta name="description" content="sneakerの紹介ページです" />
-        <link rel="icon" href="image/feature-1.jpg" />
+        <title>Sneakers: Sasaokaのポートフォリオサイト</title>
+        <meta
+            name="description"
+            content="Sasaokaのポートフォリオサイトです。架空のSneaker Shopの紹介ページになります。"
+        />
+        <link rel="icon" href="image/shoes-icon_1280.png" />
+
+        <!-- style -->
+        <link rel="stylesheet" href="styles/vendors/reset.css" />
+        <link rel="stylesheet" href="styles/style.css" />
+
+        <!-- google font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Kameron:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="styles/vendors/reset.css" />
-        <link rel="stylesheet" href="styles/style.css" />
-        <script
-            src="https://code.jquery.com/jquery-3.7.0.min.js"
-            integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
-            crossorigin="anonymous"
-        ></script>
+
+        <!-- loader -->
+        <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+
+        <!-- swiper -->
         <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
         />
-        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-        <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"
+            defer
+        ></script>
+
+        <!-- icons -->
         <script
             src="https://kit.fontawesome.com/d5106940fe.js"
             crossorigin=""
+            defer
         ></script>
+        
+        <!-- translate -->
+        <script>window.gtranslateSettings = {"default_language":"ja","native_language_names":true,"detect_browser_language":true,"wrapper_selector":".gtranslate_wrapper","flag_size":24,"switcher_horizontal_position":"right","switcher_vertical_position":"top"}</script>
+        <script src="https://cdn.gtranslate.net/widgets/latest/dwf.js" defer></script>
+
+        <!-- librarys -->
+        <script src="scripts/vendors/loader.js" defer></script>
+        <script src="scripts/libs/extension-mainvisual.js" defer></script>
+        <script src="scripts/libs/hero-slider.js" defer></script>
+        <script src="scripts/libs/scroll-observer.js"></script>
+        <script src="scripts/libs/nav-menu.js" defer></script>
+        <script src="scripts/libs/scroll.js" defer></script>
+        <script src="scripts/libs/text-animation.js" defer></script>
+        <script src="scripts/main.js" defer></script>
     </head>
+    <meta
+        name="google-site-verification"
+        content="IjxQCKHUtdiERwqA7hCHF6aI0fCS48EWTxLHugKtqmE"
+    />
     <body>
         <div id="global-container">
             <div id="loader">
@@ -47,11 +77,14 @@
                                 />
                             </a>
                         </h1>
-                        <button class="nav__icon">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
+                        <div class="header__right">
+                            <button class="nav__icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                            <div class="gtranslate_wrapper"></div>
+                        </div>
                         <div class="nav__cover"></div>
                         <nav class="nav">
                             <ul class="nav__main">
@@ -114,13 +147,41 @@
             </header>
             <main>
                 <div class="mainvisual">
-                    <video
-                        autoplay
-                        muted
-                        loop
-                        src="video/133504 (1080p).mp4"
-                        poster="image/feature-1.jpg"
-                    ></video>
+                    <div class="mainvisual__wrapper">
+                        <img
+                            class="mainvisual__img"
+                            src="image/nike-top_1920.jpg"
+                            srcset="
+                                image/nike-top_640.jpg   640w,
+                                image/nike-top_1280.jpg 1280w,
+                                image/nike-top_1920.jpg 1920w
+                            "
+                            alt="sneakerのスライド写真"
+                            sizes="50vw"
+                        />
+                        <img
+                            class="mainvisual__img"
+                            src="image/white-top_1920.jpg"
+                            srcset="
+                                image/white-top_640.jpg   640w,
+                                image/white-top_1280.jpg 1280w,
+                                image/white-top_1920.jpg 1920w
+                            "
+                            alt="sneakerのスライド写真"
+                            sizes="50vw"
+                        />
+                        <img
+                            class="mainvisual__img"
+                            src="image/black-top_1920.jpg"
+                            srcset="
+                                image/black-top_640.jpg   640w,
+                                image/black-top_1280.jpg 1280w,
+                                image/black-top_1920.jpg 1920w
+                            "
+                            alt="sneakerのスライド写真"
+                            sizes="50vw"
+                        />
+                    </div>
                     <h1>SNEAKERS</h1>
                     <div class="scroll-icon">
                         <p>Scroll</p>
@@ -136,57 +197,62 @@
                             <!-- Slides -->
                             <div class="swiper-slide">
                                 <img
-                                    src="image/shoes-allstar_1920.jpg"
+                                    src="image/allstar_1920.jpg"
                                     srcset="
-                                        image/shoes-allstar_1280.jpg 1280w,
-                                        image/shoes-allstar_1920.jpg 1920w
+                                        images/allstar_640.jpg  640w,
+                                        image/allstar_1280.jpg 1280w,
+                                        image/allstar_1920.jpg 1920w
                                     "
                                     alt="sneakerのスライド写真"
-                                    sizes="66vw"
+                                    sizes="50vw"
                                 />
                             </div>
                             <div class="swiper-slide">
                                 <img
                                     src="image/running-shoes_1920.jpg"
                                     srcset="
+                                        image/running-shoes_640.jpg   640w,
                                         image/running-shoes_1280.jpg 1280w,
                                         image/running-shoes_1920.jpg 1920w
                                     "
                                     alt="sneakerのスライド写真"
-                                    sizes="66vw"
+                                    sizes="50vw"
                                 />
                             </div>
                             <div class="swiper-slide">
                                 <img
-                                    src="image/shoes-newbalance_1920.jpg"
+                                    src="image/new-balance_1920.jpg"
                                     srcset="
-                                        image/shoes-newbalance_1280.jpg 1280w,
-                                        image/shoes-newbalance_1920.jpg 1920w
+                                        image/new-balance_640.jpg   640w,
+                                        image/new-balance_1280.jpg 1280w,
+                                        image/new-balance_1920.jpg 1920w
                                     "
                                     alt="sneakerのスライド写真"
-                                    sizes="66vw"
+                                    sizes="50vw"
                                 />
                             </div>
                             <div class="swiper-slide">
                                 <img
-                                    src="image/sneaker-asix_1920.jpg"
+                                    src="image/asix_1920.jpg"
                                     srcset="
-                                        image/sneaker-asix_1280.jpg 1280w,
-                                        image/sneaker-asix_1280.jpg 1920w
+                                        image/asix_640.jpg   640w,
+                                        image/asix_1280.jpg 1280w,
+                                        image/asix_1280.jpg 1920w
                                     "
                                     alt="sneakerのスライド写真"
-                                    sizes="66vw"
+                                    sizes="50vw"
                                 />
                             </div>
                             <div class="swiper-slide">
                                 <img
-                                    src="image/fashion-heal_1920.jpg"
+                                    src="image/fashion-heel_1920.jpg"
                                     srcset="
+                                        image/fashion-heel_640.jpg   640w,
                                         image/fashion-heel_1280.jpg 1280w,
                                         image/fashion-heel_1920.jpg 1920w
                                     "
-                                    alt="sneakerのスライド写真"
-                                    sizes="66vw"
+                                    alt="赤いheelの写真です"
+                                    sizes="50vw"
                                 />
                             </div>
                         </div>
@@ -208,10 +274,11 @@
                             <li class="feature__item appear down">
                                 <a href="#" class="feature__link">
                                     <img
-                                        src="image/shoes-allstar_1920.jpg"
+                                        src="image/allstar_1920.jpg"
                                         srcset="
-                                            image/shoes-allstar_1280.jpg 1280w,
-                                            image/shoes-allstar_1920.jpg 1920w
+                                            images/allstar_640.jpg  640w,
+                                            image/allstar_1280.jpg 1280w,
+                                            image/allstar_1920.jpg 1920w
                                         "
                                         sizes="50vw"
                                         alt="sneakerのスライド写真"
@@ -235,6 +302,7 @@
                                 <img
                                     src="image/snow_1920.jpg"
                                     srcset="
+                                        image/snow_640.jpg   640w,
                                         image/snow_1280.jpg 1280w,
                                         image/snow_1920.jpg 1920w
                                     "
@@ -244,10 +312,11 @@
                             </li>
                             <li class="feature__item appear down">
                                 <img
-                                    src="image/trail_1920.jpg"
+                                    src="image/person_1920.jpg"
                                     srcset="
-                                        image/trail_1280.jpg 1280w,
-                                        image/trail_1920.jpg 1920w
+                                        image/person_640.jpg   640w,
+                                        image/person_1280.jpg 1280w,
+                                        image/person_1920.jpg 1920w
                                     "
                                     sizes="50vw"
                                     alt="sneakerのスライド写真"
@@ -256,10 +325,11 @@
                             <li class="feature__item appear right">
                                 <a href="#" class="feature__link">
                                     <img
-                                        src="image/shoes-newbalance_1920.jpg"
+                                        src="image/new-balance_1920.jpg"
                                         srcset="
-                                            image/shoes-newbalance_1280.jpg 1280w,
-                                            image/shoes-newbalance_1920.jpg 1920w
+                                            image/new-balance_640       640w,
+                                            image/new-balance_1280.jpg 1280w,
+                                            image/new-balance_1920.jpg 1920w
                                         "
                                         sizes="50vw"
                                         alt="sneakerのスライド写真"
@@ -283,10 +353,11 @@
                             <li class="feature__item appear right">
                                 <a href="#" class="feature__link">
                                     <img
-                                        src="image/nike_1920.png"
+                                        src="image/air-jordan_1920.jpg"
                                         srcset="
-                                            image/sneaker-nike_1280.jpg  640w,
-                                            image/sneaker-nike_1920.jpg 1280w
+                                            image/air-jordan_640.jpg   640w,
+                                            image/air-jordan_1280.jpg 1280w,
+                                            image/air-jordan_1920.jpg 1920w
                                         "
                                         sizes="50vw"
                                         alt="Sneaker Nike"
@@ -308,13 +379,14 @@
                             <li class="feature__item appear right">
                                 <a href="#" class="feature__link">
                                     <img
-                                        src="image/fashion-heel_1920.png"
+                                        src="image/fashion-heel_1920.jpg"
                                         srcset="
-                                            image/fashion-heel_1280.jpg  640w,
-                                            image/fashion-heel_1920.jpg 1280w
+                                            image/fashion-heel_640.jpg   640w,
+                                            image/fashion-heel_1280.jpg 1280w,
+                                            image/fashion-heel_1920.jpg 1920w
                                         "
                                         sizes="50vw"
-                                        alt="Fashion Heel"
+                                        alt="赤いヒールの写真です"
                                     />
                                     <div class="feature__text">
                                         <div class="feature__text__inner">
@@ -334,10 +406,11 @@
                             <li class="feature__item appear left">
                                 <a href="#" class="feature__link">
                                     <img
-                                        src="image/shoes-blue_1920.png"
+                                        src="image/adidas_1920.jpg"
                                         srcset="
-                                            image/shoes-blue_1280.jpg  640w,
-                                            image/shoes-blue_1920.jpg 1280w
+                                            image/adidas_640.jpg   640w,
+                                            image/adidas_1280.jpg 1280w,
+                                            image/adidas_1920.jpg 1920w
                                         "
                                         sizes="50vw"
                                         alt="Sneaker Nike"
@@ -359,8 +432,9 @@
                             <li class="feature__item appear left">
                                 <a href="#" class="feature__link">
                                     <img
-                                        src="image/boots_1920.png"
+                                        src="image/boots_1920.jpg"
                                         srcset="
+                                            image/boots_640.jpg   640w,
                                             image/boots_1280.jpg 1280w,
                                             image/boots_1920.jpg 1920w
                                         "
@@ -386,6 +460,7 @@
                                 <img
                                     src="image/high-heels_1920.jpg"
                                     srcset="
+                                        image/high-heels_640.jpg   640w,
                                         image/high-heels_1280.jpg 1280w,
                                         image/high-heels_1920.jpg 1920w
                                     "
@@ -452,8 +527,6 @@
                 <p>&copy;Sneakers</p>
             </footer>
             <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
-            <script src="scripts/import.js"></script>
-            <script src="scripts/main.js"></script>
         </div>
     </body>
 </html>

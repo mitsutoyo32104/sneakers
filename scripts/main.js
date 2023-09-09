@@ -9,11 +9,10 @@ class Main {
     }
 
     _init() {
+        new ExtensionMainvisual;
         new NavMenu;
-        new TextAnimation('.animate-title');
         new HeroSlider;
-
-        // Link先へのScroll
+        new TextAnimation('.animate-title');
         new Scroll(".nav__link", "sns");
     };
 

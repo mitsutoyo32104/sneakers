@@ -1,20 +1,21 @@
 @use '../globals' as *;
 
 .mainvisual {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
     position: relative;
+    
+    &__wrapper {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        overflow-x: hidden;
+    }
 
-    & > video {
-        min-width: 100%;
-        min-height: 100%;
-        max-width: 100%;
-        
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    &__img {
+        width: calc(100% / 3);
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        flex-shrink: 0;
     }
 
     & > h1 {
@@ -24,7 +25,8 @@
         left: 50%;
         transform: translate(-50%, calc(-50% - 40px));
         color: white;
-        font-size: 2rem;
+        font-size: 3rem;
+        text-shadow: 1px 1px 1px black;
     }
 
     & .scroll-icon {
