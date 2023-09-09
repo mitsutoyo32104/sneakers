@@ -7,6 +7,11 @@ body {
   scroll-behavior: smooth;
 }
 
+#global-container {
+  width: 100vw;
+  overflow: hidden;
+}
+
 .container {
   padding: 0 16px;
   max-width: 1000px;
@@ -20,6 +25,10 @@ body {
 }
 .section-title > .char {
   font-size: 2rem;
+}
+
+#site-title-text {
+  display: none;
 }
 
 .header {
@@ -36,6 +45,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.header__right {
+  display: flex;
 }
 
 .nav {
@@ -56,6 +68,7 @@ body {
   background-color: transparent;
   border: none;
   outline: none;
+  margin-right: 20px;
 }
 .nav__icon > span {
   display: block;
@@ -290,6 +303,14 @@ body {
     transform: rotate(-360deg);
   }
 }
+.gt_switcher_wrapper {
+  position: static !important;
+}
+
+.gt_option {
+  position: fixed !important;
+}
+
 @keyframes kf-down-arrow {
   0% {
     transform: none;
@@ -305,20 +326,20 @@ body {
   }
 }
 .mainvisual {
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
   position: relative;
-  margin-top: 80px;
-  margin-bottom: 50px;
 }
-.mainvisual > video {
-  min-width: 100%;
-  min-height: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.mainvisual__wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+.mainvisual__img {
+  width: 33.3333333333%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
 }
 .mainvisual > h1 {
   font-family: serif;
@@ -327,7 +348,8 @@ body {
   left: 50%;
   transform: translate(-50%, calc(-50% - 40px));
   color: white;
-  font-size: 2rem;
+  font-size: 3rem;
+  text-shadow: 1px 1px 1px black;
 }
 .mainvisual .scroll-icon {
   position: absolute;
@@ -418,7 +440,7 @@ body {
   color: black;
 }
 .feature__link > img {
-  max-width: 100%;
+  width: 100%;
   border-bottom: 1px solid rgba(198, 196, 196, 0.5);
 }
 .feature__text {

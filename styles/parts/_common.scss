@@ -9,6 +9,11 @@ body {
     scroll-behavior: smooth;
 }
 
+#global-container {
+    width: 100vw;
+    overflow: hidden;
+}
+
 .container {
     padding: 0 16px;
     max-width: $maxWidth;
@@ -23,4 +28,8 @@ body {
     & > .char {
         font-size: 2rem;
     }
+}
+
+#site-title-text {
+    display: none;
 }

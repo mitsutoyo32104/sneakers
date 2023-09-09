@@ -9,13 +9,10 @@ class Main {
     }
 
     _init() {
-        // navigation.openをtoggle
+        new ExtensionMainvisual;
         new NavMenu;
-    
-        // titleの文字をspan.charで分割
+        new HeroSlider;
         new TextAnimation('.animate-title');
-
-        // Link先へのScroll
         new Scroll(".nav__link", "sns");
     };
 
@@ -24,7 +21,6 @@ class Main {
         new ScrollObserver('.appear', this._addInview.bind(this));
         new ScrollObserver('.animate-title', this._addInview.bind(this));
     }
-
 
     // interseciton Observerへ登録するcallback
     _addInview(el) {
